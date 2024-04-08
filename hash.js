@@ -28,13 +28,20 @@ class HashMap {
       const index = this.hash(key);
       return this.table[index];
     }
+/* 
+    has(key) { 
+        if (mylist.hasOwnProperty('key')){return true}; 
+    }
+ */
   }
 
   const mylist = new HashMap();
   mylist.set("eduar", 1985);
   mylist.set("Viky", 2018 );
+  console.log(mylist.get("Viky"));
+  console.log(mylist.hasOwnProperty('Viky'));
   //console.log(mylist.tableSize);
-  console.table(mylist);
+  //console.table(mylist);
 
   /* mylist.forEach((values, keys) => {
     console.log(values, keys);
