@@ -99,9 +99,9 @@ class HashMap {  // start hash function
     }
 
     // Return an array of keys.
-    keys() {
+    keys() {       //this.buckets[index] !== undefined && key === this.buckets[index].key;     
         const keys = this.buckets.filter((value) => value !== undefined).map((obj) => obj.key);
-        return keys;
+        return keys; 
     }
 
     // Return an array of values.
@@ -117,4 +117,12 @@ class HashMap {  // start hash function
     }
 }
 
-// const newmap = new HashMap;
+const newmap1 = new HashMap;
+newmap1.set('a', 1);
+newmap1.set('b', 2);
+newmap1.set('c', 3);
+newmap1.set('d', 4);
+
+console.log("has the key a " + newmap1.has('a'));
+console.log('"a" value is ' + newmap1.get('a'));
+console.log('all entries: ' + newmap1.entries());
