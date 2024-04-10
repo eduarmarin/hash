@@ -109,6 +109,10 @@ class HashMap {  // start hash function
         const values = this.buckets.filter((value) => value !== undefined).map((obj) => obj.value);
         return values;
     }
+    lenghts() {
+        const lenghts = this.buckets.filter((value) => value !== undefined).length;
+        return lenghts;
+    }
 
     // Return an array of key-value pairs.
     entries() {
@@ -126,3 +130,4 @@ newmap1.set('d', 4);
 console.log("has the key a " + newmap1.has('a'));
 console.log('"a" value is ' + newmap1.get('a'));
 console.log('all entries: ' + newmap1.entries());
+console.log('lenght is: ' + newmap1.lenghts());
